@@ -21,7 +21,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Конфигурация
-BASE_DIR = Path(__file__).parent.parent / "EtsyAIFactory"
+BASE_DIR = Path(__file__).parent
 OUTPUT_DIR = BASE_DIR / "output"
 CONFIG_DIR = BASE_DIR / "config"
 LOGS_DIR = BASE_DIR / "logs"
