@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtsyAIFactory v3.0</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+        .container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 800px; width: 90%; }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .features { background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .features h3 { color: #333; margin-bottom: 15px; }
+        .features ul { list-style: none; }
+        .features li { padding: 8px 0; color: #555; }
+        .features li:before { content: "✓ "; color: #28a745; font-weight: bold; }
+        .status { background: #d4edda; color: #155724; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+        .api-info { background: #e7f1ff; padding: 20px; border-radius: 10px; }
+        .api-info h3 { color: #004085; margin-bottom: 10px; }
+        .api-info p { color: #004085; }
+        .footer { text-align: center; margin-top: 30px; color: #888; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏭 EtsyAIFactory v3.0</h1>
+        <p class="subtitle">Automated POD Listing Generator for Etsy</p>
+        
+        <div class="status">
+            🟢 Application is running successfully!
+        </div>
+        
+        <div class="features">
+            <h3>Features:</h3>
+            <ul>
+                <li>AI-powered design generation (DALL-E 3)</li>
+                <li>Automatic SEO optimization for titles, tags, descriptions</li>
+                <li>Mockup creation with design overlay</li>
+                <li>Video content generation (Sora 2)</li>
+                <li>Draft listing publication via Etsy API</li>
+                <li>OAuth 2.0 secure authentication</li>
+            </ul>
+        </div>
+        
+        <div class="api-info">
+            <h3>Etsy API Integration:</h3>
+            <p>This application uses Etsy API v3 with OAuth 2.0 for secure listing management.</p>
+            <p><strong>Permissions:</strong> listings_w, listings_r, shops_r</p>
+        </div>
+        
+        <div class="footer">
+            <p>Kelly-Kirill Style © 2026 | Built with Python Flask</p>
+        </div>
+    </div>
+</body>
+</html>
