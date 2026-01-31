@@ -358,9 +358,9 @@ def health_check():
 
 if __name__ == '__main__':
     # Создаем необходимые директории
-    LOGS_DIR.mkdir(exist_ok=True)
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    CONFIG_DIR.mkdir(exist_ok=True)
+  LOGS_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+CONFIG_DIR.mkdir(parents=True, exist_ok=True)
     
     # Запускаем приложение
     port = int(os.getenv('PORT', 5000))
