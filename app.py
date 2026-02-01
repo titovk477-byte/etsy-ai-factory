@@ -13,17 +13,14 @@ def index():
 @app.route('/callback')
 def callback():
     code = request.args.get('code', '')
-    return f'''
-    <html>
-    <head><title>OAuth Callback</title></head>
-    <body style="font-family: Arial; text-align: center; padding: 50px;">
-        <h1>✅ Authorization Successful!</h1>
-        <p>Your authorization code:</p>
-        <code style="background: #f0f0f0; padding: 10px; display: block; margin: 20px;">{code}</code>
-        <p>You can close this window.</p>
-    </body>
-    </html>
-    '''
+    html = '<html><head><title>OAuth Callback</title></head>'
+    html += '<body style="font-family: Arial; text-align: center; padding: 50px;">'
+    html += '<h1>Authorization Successful!</h1>'
+    html += '<p>Your authorization code:</p>'
+    html += '<code style="background: #f0f0f0; padding: 10px;">' + code + '</code>'
+    html += '<p>You can close this window.</p>'
+    html += '</body></html>'
+    return html
 
 @app.route('/api/health')
 def health():
@@ -34,14 +31,3 @@ if __name__ == '__main__':
     Path('output').mkdir(exist_ok=True)
     port = int(os.getenv('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-```
-
-### Шаг 4: Commit changes
-
-### Шаг 5: Подожди 2-3 минуты (Render автоматически обновит)
-
----
-
-### Проверь:
-```
-https://kk-style-app.onrender.com/callback
